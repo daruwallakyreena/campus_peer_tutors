@@ -105,7 +105,7 @@ class _TutorListScreenState extends State<TutorListScreen> {
                           setState(() { errorMsg = 'Auth registration failed.'; loading = false; });
                           return;
                         }
-                        final insertRes = await Supabase.instance.client.from('students').insert({
+                        await Supabase.instance.client.from('students').insert({
                           'name': name,
                           'uid': uid,
                           'rollno': rollno,
